@@ -1,0 +1,55 @@
+case SystemLanguage.:
+                    switch (word)
+                    {
+                        case Word.ads: return "";
+                        case Word.brake: return "";
+                        case Word.buy: return "";
+                        case Word.capacity: return "";
+                        case Word.cars: return "";
+                        case Word.continue_for: return "";
+                        case Word.credits: return "";
+                        case Word.damage: return "";
+                        case Word.destroy: return "";
+                        case Word.distance: return "";
+                        case Word.fire: return "";
+                        case Word.full: return "";
+                        case Word.game_over: return "";
+                        case Word.health: return "";
+                        case Word.music: return "";
+                        case Word.pause: return "";
+                        case Word.play: return "";
+                        case Word.quit: return "";
+                        case Word.select: return "";
+                        case Word.selected: return "";
+                        case Word.settings: return "";
+                        case Word.sfx: return "";
+                        case Word.shop: return "";
+                        case Word.special: return "";
+                        case Word.tasks: return "";
+                        case Word.total: return "";
+
+			case Word.credits_text: return "";
+
+			case Word.switch_account: return "";
+                        case Word.disk: return "";
+                        case Word.cloud: return "";
+                        case Word.best_distance: return "";
+                        case Word.last_visit: return "";
+                        case Word.name: return "";
+                        case Word.player_info: return "";
+                        case Word.enter_your_name: return "";
+                        case Word.enter_new_name: return "";
+                        case Word.pay: return "";
+                        case Word.ok: return "";
+                        case Word.new_task_after: return "";
+                        case Word.collect_water: return "";
+                        case Word.deal_damage: return "";
+                        case Word.kill_monsters: return "";
+                        case Word.kill_zombies: return "";
+                        case Word.reward: return "";
+                        case Word.privacy_policy: return "";
+
+
+                        default:
+                            throw new NotImplementedException("Word don't exist!");
+                    }

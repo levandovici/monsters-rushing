@@ -1,0 +1,72 @@
+# Blender MTL File: 'toolBox.blend'
+# Material Count: 6
+
+newmtl HAMER
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 9
+map_Kd C:\\Users\\Cleidisurf\\Desktop\\tool Box 3d\\hamerTexture.png
+map_d C:\\Users\\Cleidisurf\\Desktop\\tool Box 3d\\hamerTexture.png
+
+newmtl Nail
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 9
+map_Kd C:\\Users\\Cleidisurf\\Desktop\\tool Box 3d\\Nail.png
+map_d C:\\Users\\Cleidisurf\\Desktop\\tool Box 3d\\Nail.png
+
+newmtl Saw_smal
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 9
+map_Kd C:\\Users\\Cleidisurf\\Desktop\\Tool__Box\\Saw\\Texture_saw.png
+map_d C:\\Users\\Cleidisurf\\Desktop\\Tool__Box\\Saw\\Texture_saw.png
+
+newmtl ScrewDriver
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 9
+map_Kd C:\\Users\\Cleidisurf\\Desktop\\Tool__Box\\screwdriver\\Srrewdriver.png
+map_d C:\\Users\\Cleidisurf\\Desktop\\Tool__Box\\screwdriver\\Srrewdriver.png
+
+newmtl Top
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd toolBox.png
+
+newmtl toolbox
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ToolBoxUV.png
