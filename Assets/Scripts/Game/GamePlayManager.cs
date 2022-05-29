@@ -166,7 +166,6 @@ public class GamePlayManager : MonoBehaviour
         };
         _map.OnAddWater += (c) => _UIManager.Game.SetAddWater(c);
         _map.SetUp(SaveLoadManager.Current.selectedCar, SaveLoadManager.Current.SelectedCarData);
-        _map.Car.Gun.OnDirectionNeed += _UIManager.Game.Joystick.Direction;
 
 
         _UIManager.Game.OnPauseClicked += () =>

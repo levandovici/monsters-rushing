@@ -7,30 +7,40 @@ public class MainUIManager : MonoBehaviour
 {
     [SerializeField]
     private MainUIPanel _mainUIPanel;
+
     [SerializeField]
     private ShopUIPanel _shopUIPanel;
+
     [SerializeField]
     private CarsUIPanel _carsUIPanel;
+
     [SerializeField]
     private SettingsUIPanel _settingsUIPanel;
+
     [SerializeField]
     private TasksUIPanel _tasksUIPanel;
-    [SerializeField]
-    private AdsUIPanel _adsUIPanel;
+
     [SerializeField]
     private PlayerInfoUIPanel _playerInfoPanel;
+
     [SerializeField]
     private EditNameUIPanel _editNamePanel;
+
     [SerializeField]
     private SwitchAccountUIPanel _switchAccountPanel;
+
     [SerializeField]
     private InternetRequireUIPanel _internetRequirePanel;
+
     [SerializeField]
     private InventoryUIPanel _inventoryPanel;
+
     [SerializeField]
     private OpenChestUIPanel _openChestPanel;
+
     [SerializeField]
     private YouGotUIPanel _youGotPanel;
+
     [SerializeField]
     private PromoCodeErrorUIPanel _promoCodeErrorPanel;
 
@@ -44,7 +54,6 @@ public class MainUIManager : MonoBehaviour
     public CarsUIPanel Cars => _carsUIPanel;
     public SettingsUIPanel Settings => _settingsUIPanel;
     public TasksUIPanel Tasks => _tasksUIPanel;
-    public AdsUIPanel Ads => _adsUIPanel;
     public PlayerInfoUIPanel PlayerInfo => _playerInfoPanel;
     public EditNameUIPanel EditName => _editNamePanel;
     public SwitchAccountUIPanel SwitchAccount => _switchAccountPanel;
@@ -207,9 +216,6 @@ public class MainUIManager : MonoBehaviour
         _mainUIPanel.OnSettingsClicked += () => OpenSettings();
         _mainUIPanel.OnTasksClicked += () => OpenTasks();
         _mainUIPanel.OnAdsOpenShopClicked += () => OpenShop();
-
-        _adsUIPanel.Hide();
-        _adsUIPanel.OnBackClicked += () => _adsUIPanel.Hide();
     }
 
     private void OnDestroy()
@@ -220,8 +226,6 @@ public class MainUIManager : MonoBehaviour
         _mainUIPanel.OnSettingsClicked -= () => OpenSettings();
         _mainUIPanel.OnTasksClicked -= () => OpenTasks();
         _mainUIPanel.OnAdsOpenShopClicked -= () => OpenShop();
-
-        _adsUIPanel.OnBackClicked -= () => _adsUIPanel.Hide();
     }
 
 
@@ -231,7 +235,6 @@ public class MainUIManager : MonoBehaviour
         _shopUIPanel.SetTitle(Words.GetWord(Word.shop, language));
         _settingsUIPanel.SetTitle(Words.GetWord(Word.settings, language));
         _tasksUIPanel.SetTitle(Words.GetWord(Word.tasks, language));
-        _adsUIPanel.SetTitle(Words.GetWord(Word.ads, language));
         _inventoryPanel.SetTitle(Words.GetWord(Word.inventory, language));
         _promoCodeErrorPanel.SetTitle(Words.GetWord(Word.promo_code, language));
         _youGotPanel.SetTitle(Words.GetWord(Word.you_got, language));

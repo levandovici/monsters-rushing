@@ -42,7 +42,7 @@ namespace Vocabulary
                         case Word.tasks: return "Tasks";
                         case Word.total: return "Total";
                         case Word.credits_text: return
-                                "Icon made by Vectors Market from www.flaticon.com\n3D: www.cgtrader.com\n\nCreators: NikitaLnc and DoraLnc";
+                                "Icon made by Vectors Market from www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Switch Account";
                         case Word.disk: return "Disk";
@@ -107,7 +107,7 @@ namespace Vocabulary
                         case Word.tasks: return "Задания";
                         case Word.total: return "Всего";
                         case Word.credits_text: return
-                                "Иконка сделана Рынком Векторов с www.flaticon.com\n3D: www.cgtrader.com\n\nСоздатели: NikitaLnc и DoraLnc";
+                                "Иконка сделана Рынком Векторов с www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Сменить аккаунт";
                         case Word.disk: return "Диск";
@@ -172,7 +172,7 @@ namespace Vocabulary
                         case Word.tasks: return "Misiuni";
                         case Word.total: return "Toate";
                         case Word.credits_text:
-                            return "Icoană realizată de Vectors Market de pe www.flaticon.com\n3D: www.cgtrader.com\n\nCreatori: NikitaLnc și DoraLnc";
+                            return "Icoană realizată de Vectors Market de pe www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Schimbă contul";
                         case Word.disk: return "Disc";
@@ -237,7 +237,7 @@ namespace Vocabulary
                         case Word.tasks: return "Atamaları";
                         case Word.total: return "Tüm";
                         case Word.credits_text:
-                            return "www.flaticon.com adresinden Vektörler Pazarı tarafından yapılan simge\n3D: www.cgtrader.com\n\nYaratıcılar: NikitaLnc ve DoraLnc";
+                            return "www.flaticon.com adresinden Vektörler Pazarı tarafından yapılan simge\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Hesabı değiştir";
                         case Word.disk: return "Disk";
@@ -302,7 +302,7 @@ namespace Vocabulary
                         case Word.tasks: return "Tareas";
                         case Word.total: return "Total";
                         case Word.credits_text:
-                            return "Icono realizado por Vectors Market de www.flaticon.com\n3D: www.cgtrader.com\n\nCreadores: NikitaLnc y DoraLnc";
+                            return "Icono realizado por Vectors Market de www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Cambiar cuenta";
                         case Word.disk: return "Conducir";
@@ -367,7 +367,7 @@ namespace Vocabulary
                         case Word.tasks: return "Tarefas";
                         case Word.total: return "Total";
                         case Word.credits_text:
-                            return "Ícone criado pelo Vectors Market de www.flaticon.com\n3D: www.cgtrader.com\n\nCriadores: NikitaLnc e DoraLnc";
+                            return "Ícone criado pelo Vectors Market de www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Alterar conta";
                         case Word.disk: return "Drive";
@@ -432,7 +432,7 @@ namespace Vocabulary
                         case Word.tasks: return "Tâches";
                         case Word.total: return "Au total";
                         case Word.credits_text:
-                            return "Icône réalisée par Vectors Market sur www.flaticon.com\n3D: www.cgtrader.com\n\nCréateurs: NikitaLnc et DoraLnc";
+                            return "Icône réalisée par Vectors Market sur www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Changer de compte";
                         case Word.disk: return "Conduire";
@@ -497,7 +497,7 @@ namespace Vocabulary
                         case Word.tasks: return "Aufgaben";
                         case Word.total: return "Insgesamt";
                         case Word.credits_text:
-                            return "Symbol von Vectors Market von www.flaticon.com\n3D: www.cgtrader.com\n\nSchöpfer: NikitaLnc und DoraLnc";
+                            return "Symbol von Vectors Market von www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Konto ändern";
                         case Word.disk: return "Fahren";
@@ -562,7 +562,7 @@ namespace Vocabulary
                         case Word.tasks: return "Assegnazioni";
                         case Word.total: return "Tutto";
                         case Word.credits_text:
-                            return "Icona realizzata dal mercato dei vettori da www.flaticon.com\n3D: www.cgtrader.com\n\nCreatori: NikitaLnc e DoraLnc";
+                            return "Icona realizzata dal mercato dei vettori da www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Cambia account";
                         case Word.disk: return "Disco";
@@ -627,7 +627,7 @@ namespace Vocabulary
                         case Word.tasks: return "Завдання";
                         case Word.total: return "За все";
                         case Word.credits_text:
-                            return "Ікона, зроблена Вектором Маркет з www.flaticon.com\n3D: www.cgtrader.com\n\nТворці: NikitaLnc та DoraLnc";
+                            return "Ікона, зроблена Вектором Маркет з www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Змінити акаунт";
                         case Word.disk: return "Диск";
@@ -692,7 +692,7 @@ namespace Vocabulary
                         case Word.tasks: return "Zadania";
                         case Word.total: return "Łącznie";
                         case Word.credits_text:
-                            return "Ikona wykonana przez Vectors Market z www.flaticon.com\n3D: www.cgtrader.com\n\nTwórcy: NikitaLnc i DoraLnc";
+                            return "Ikona wykonana przez Vectors Market z www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Zmień konto";
                         case Word.disk: return "Jedź";
@@ -757,7 +757,7 @@ namespace Vocabulary
                         case Word.tasks: return "Uppdrag";
                         case Word.total: return "Allt";
                         case Word.credits_text:
-                            return "Ikon tillverkad av Vectors Market från www.flaticon.com\n3D: www.cgtrader.com\n\nSkapare: NikitaLnc och DoraLnc";
+                            return "Ikon tillverkad av Vectors Market från www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Byt konto";
                         case Word.disk: return "Disk";
@@ -822,7 +822,7 @@ namespace Vocabulary
                         case Word.tasks: return "任务";
                         case Word.total: return "合计";
                         case Word.credits_text: 
-                            return "由Vectors Market从www.flaticon.com制造的图标\n3D：www.cgtrader.com\n\n创建者：NikitaLnc和DoraLnc";
+                            return "由Vectors Market从www.flaticon.com制造的图标\n3D：www.cgtrader.com";
 
                         case Word.switch_account: return "变更账户";
                         case Word.disk: return "驱动器";
@@ -887,7 +887,7 @@ namespace Vocabulary
                         case Word.tasks: return "Заданні";
                         case Word.total: return "За ўсё";
                         case Word.credits_text:
-                            return "Абраз, зроблены кампаніяй Vectors Market з www.flaticon.com\n3D: www.cgtrader.com\n\nСтваральнікі: NikitaLnc і DoraLnc";
+                            return "Абраз, зроблены кампаніяй Vectors Market з www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Змяніць рахунак";
                         case Word.disk: return "Дыск";
@@ -952,7 +952,7 @@ namespace Vocabulary
                         case Word.tasks: return "Úkoly";
                         case Word.total: return "Сelkem";
                         case Word.credits_text:
-                            return "Ikona společnosti Vector Market z webu www.flaticon.com\n3D: www.cgtrader.com\n\nTvůrci: NikitaLnc a DoraLnc";
+                            return "Ikona společnosti Vector Market z webu www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Změnit účet";
                         case Word.disk: return "Řídit";
@@ -1017,7 +1017,7 @@ namespace Vocabulary
                         case Word.tasks: return "Εργασίες";
                         case Word.total: return "Σύνολο";
                         case Word.credits_text:
-                            return "Εικονίδιο της Vectors Market από το www.flaticon.com\n3D: www.cgtrader.com\n\nΔημιουργοί: NikitaLnc και DoraLnc";
+                            return "Εικονίδιο της Vectors Market από το www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Αλλαγή λογαριασμού";
                         case Word.disk: return "Οδήγηση";
@@ -1082,7 +1082,7 @@ namespace Vocabulary
                         case Word.tasks: return "Tugas";
                         case Word.total: return "Total";
                         case Word.credits_text:
-                            return "Ikon yang dibuat oleh Vektor Market dari www.flaticon.com\n3D: www.cgtrader.com\n\nPembuat: NikitaLnc dan DoraLnc";
+                            return "Ikon yang dibuat oleh Vektor Market dari www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Ubah akun";
                         case Word.disk: return "Berkendara";
@@ -1147,7 +1147,7 @@ namespace Vocabulary
                         case Word.tasks: return "タスク";
                         case Word.total: return "合計";
                         case Word.credits_text:
-                            return "www.flaticon.comのVectors Marketが作成したアイコン\n3D：www.cgtrader.com\n\n作成者：NikitaLncおよびDoraLnc";
+                            return "www.flaticon.comのVectors Marketが作成したアイコン\n3D：www.cgtrader.com";
 
                         case Word.switch_account: return "アカウントを変更";
                         case Word.disk: return "ドライブ";
@@ -1212,7 +1212,7 @@ namespace Vocabulary
                         case Word.tasks: return "작업";
                         case Word.total: return "총계";
                         case Word.credits_text:
-                            return "www.flaticon.com에서 Vectors Market이 만든 아이콘\n3D : www.cgtrader.com\n\n제작자 : NikitaLnc 및 DoraLnc";
+                            return "www.flaticon.com에서 Vectors Market이 만든 아이콘\n3D : www.cgtrader.com";
 
                         case Word.switch_account: return "계정 변경";
                         case Word.disk: return "드라이브";
@@ -1277,7 +1277,7 @@ namespace Vocabulary
                         case Word.tasks: return "المهام";
                         case Word.total: return "المجموع";
                         case Word.credits_text:
-                            return "أيقونة صنعها فيكتورس ماركت من \nwww.flaticon.com\n3D: www.cgtrader.com\n\nالتأليف: NikitaLnc و \nDoraLnc";
+                            return "أيقونة صنعها فيكتورس ماركت من \nwww.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "تغيير الحساب";
                         case Word.disk: return "القيادة";
@@ -1342,7 +1342,7 @@ namespace Vocabulary
                         case Word.tasks: return "Opgaver";
                         case Word.total: return "I alt";
                         case Word.credits_text: 
-                            return "Ikon lavet af Vectors Market fra www.flaticon.com\n3D: www.cgtrader.com\n\nSkabere: NikitaLnc og DoraLnc";
+                            return "Ikon lavet af Vectors Market fra www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Skift konto";
                         case Word.disk: return "Disk";
@@ -1407,7 +1407,7 @@ namespace Vocabulary
                         case Word.tasks: return "Задания";
                         case Word.total: return "Общо";
                         case Word.credits_text:
-                            return "Икона, направена от Vectors Market от www.flaticon.com\n3D: www.cgtrader.com\n\nСъздатели: NikitaLnc и DoraLnc";
+                            return "Икона, направена от Vectors Market от www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Промяна на акаунта";
                         case Word.disk: return "Диск";
@@ -1472,7 +1472,7 @@ namespace Vocabulary
                         case Word.tasks: return "Oppdrag";
                         case Word.total: return "Total";
                         case Word.credits_text:
-                            return "Ikon laget av Vectors Market fra www.flaticon.com\n3D: www.cgtrader.com\n\nSkapere: NikitaLnc og DoraLnc";
+                            return "Ikon laget av Vectors Market fra www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Bytt konto";
                         case Word.disk: return "Disk";
@@ -1537,7 +1537,7 @@ namespace Vocabulary
                         case Word.tasks: return "Uždaviniai";
                         case Word.total: return "Iš viso";
                         case Word.credits_text:
-                            return "Ikona, kurią sukūrė„ Vectors Market “iš www.flaticon.com\n3D: www.cgtrader.com\n\nKūrėjai: „NikitaLnc“ ir „DoraLnc“";
+                            return "Ikona, kurią sukūrė„ Vectors Market “iš www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Pakeisti sąskaitą";
                         case Word.disk: return "Važiuok";
@@ -1602,7 +1602,7 @@ namespace Vocabulary
                         case Word.tasks: return "Nhiệm vụ";
                         case Word.total: return "Tổng cộng";
                         case Word.credits_text:
-                            return "Biểu tượng được tạo bởi vectơ thị trường từ www.flaticon.com\n3D: www.cgtrader.com\n\nNgười tạo: NikitaLnc và DoraLnc";
+                            return "Biểu tượng được tạo bởi vectơ thị trường từ www.flaticon.com\n3D: www.cgtrader.com";
 
                         case Word.switch_account: return "Thay đổi tài khoản";
                         case Word.disk: return "Lái xe";

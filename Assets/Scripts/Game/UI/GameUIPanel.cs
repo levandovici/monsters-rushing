@@ -53,9 +53,6 @@ public class GameUIPanel : UIPanel
     private int _waterCount = 0;
     private float _counter = 0;
 
-    [SerializeField]
-    private Joystick _joystick;
-
 
 
     private SystemLanguage _language;
@@ -70,10 +67,6 @@ public class GameUIPanel : UIPanel
     public event Action OnBrakePointerUp;
     public event Action OnLeftLineClicked;
     public event Action OnRightLineClicked;
-
-
-
-    public Joystick Joystick => _joystick;
 
 
 
@@ -167,14 +160,12 @@ public class GameUIPanel : UIPanel
     public override void Show()
     {
         base.Show();
-        _joystick.gameObject.SetActive(true);
         _addWaterPanel.SetActive(false);
     }
 
     public override void Hide()
     {
         base.Hide();
-        _joystick.gameObject.SetActive(false);
     }
 
 

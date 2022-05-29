@@ -6,9 +6,6 @@ using System;
 public class Gun : MonoBehaviour
 {
     [SerializeField]
-    private float _rotationSpeed = 5f;
-
-    [SerializeField]
     private Bullet _bulletPrefab;
     [SerializeField]
     private Transform[] _bulletPivot;
@@ -45,10 +42,6 @@ public class Gun : MonoBehaviour
 
     [SerializeField]
     private CameraShake _cam;
-
-
-
-    public event Func<Vector2> OnDirectionNeed;
 
 
 
@@ -157,8 +150,42 @@ public class Gun : MonoBehaviour
         if (_shoot)
             OneShoot();
 
-        Rotate(OnDirectionNeed.Invoke());
+        LookAtNearestEnimy();
     }
+
+    private void LookAtNearestEnimy()
+    {
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+
+        int target = -1;
+
+        float distance = Mathf.Infinity;
+
+        for(int i = 0; i < monsters.Length; i++)
+        {
+            if (monsters[i].transform.position.z > transform.position.z)
+            {
+                float dist = Vector3.Distance(transform.position, monsters[i].transform.position);
+
+                if (dist < distance)
+                {
+                    distance = dist;
+
+                    target = i;
+                }
+            }
+        }
+
+        if(target < 0)
+        {
+            transform.localEulerAngles = Vector3.zero;
+        }
+        else
+        {
+            transform.LookAt(monsters[target].transform);
+        }
+    }
+
 
 
 
@@ -206,21 +233,6 @@ public class Gun : MonoBehaviour
 
             _shell[shellID].SetActive(false);
         }
-    }
-
-
-
-    private void Rotate(Vector2 direction)
-    {
-        float xRot = direction.y;
-        float yRot = direction.x;
-
-        xRot = Mathf.Clamp(xRot, -1f, 0f);
-        yRot = Mathf.Clamp(yRot, -1f, 1f);
-
-        Vector3 rot = new Vector3(-xRot, yRot, 0f);// * _rotationSpeed;
-
-        transform.localEulerAngles = new Vector3(-xRot * 30f, yRot * 30f, 0f);
     }
 
 

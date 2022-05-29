@@ -149,9 +149,9 @@ public class MapController : MonoBehaviour
         if (mapPosition >= 100f)
         {
             //setting
-            //-15 -10 0 10 15 // -45 45
+            //-10 0 10 // -45 45
             int count = ls.objectsCount;
-            Table table = new Table(5, 19);
+            Table table = new Table(3, 19);
 
             while (table.isFree() && count > 0)
             {
@@ -169,45 +169,52 @@ public class MapController : MonoBehaviour
                 count--;
             }
 
+            count = ls.monstersCount;
 
-            count = ls.towersCount;
-            while(table.isFree() && count > 0)
+            if (count > 0)
             {
-                Table.Coordinates coordinates = table.RandomCoordinates();
-                float w = coordinates.x * 5f;
-                float l = coordinates.y * 5f;
+                while (table.isFree() && count > 0)
+                {
+                    Table.Coordinates coordinates = table.RandomCoordinates();
+                    float w = coordinates.x * 5f;
+                    float l = coordinates.y * 5f;
 
 
-                TowerSet set = RandomizableSet.GetRandom(ls.towers);
-                Tower o = ObjectsController.InstantiateAntity(set.obj, new Vector3(w, 0f, l + mapPosition)) as Tower;
-                o.SetUp(set.health, set.bumpDamage, set.waterPrice, set.damage, set.coolDown, set.visionRadius);
+                    MonsterSet set = RandomizableSet.GetRandom(ls.monsters);
 
-                _allObjects.Add(o);
+                    if (set != null)
+                    {
+                        Monster o = ObjectsController.InstantiateAntity(set.obj, new Vector3(w, 0f, l + mapPosition)) as Monster;
+                        o.SetUp(set.health, set.bumpDamage, set.waterPrice, set.damage, set.coolDown, set.speed, set.visionRadius);
 
-                count--;
+                        _allObjects.Add(o);
+                    }
+
+
+                    count--;
+                }
             }
 
 
-            count = ls.monstersCount;
-            while (table.isFree() && count > 0)
+            count = ls.towersCount;
+
+            if (count > 0)
             {
-                Table.Coordinates coordinates = table.RandomCoordinates();
-                float w = coordinates.x * 5f;
-                float l = coordinates.y * 5f;
-
-
-                MonsterSet set = RandomizableSet.GetRandom(ls.monsters);
-
-                if (set != null)
+                while (table.isFree() && count > 0)
                 {
-                    Monster o = ObjectsController.InstantiateAntity(set.obj, new Vector3(w, 0f, l + mapPosition)) as Monster;
-                    o.SetUp(set.health, set.bumpDamage, set.waterPrice, set.damage, set.coolDown, set.speed, set.visionRadius);
+                    Table.Coordinates coordinates = table.RandomCoordinates();
+                    float w = coordinates.x * 5f;
+                    float l = coordinates.y * 5f;
+
+
+                    TowerSet set = RandomizableSet.GetRandom(ls.towers);
+                    Tower o = ObjectsController.InstantiateAntity(set.obj, new Vector3(w, 0f, l + mapPosition)) as Tower;
+                    o.SetUp(set.health, set.bumpDamage, set.waterPrice, set.damage, set.coolDown, set.visionRadius);
 
                     _allObjects.Add(o);
+
+                    count--;
                 }
-
-
-                count--;
             }
         }
 
@@ -221,7 +228,7 @@ public class MapController : MonoBehaviour
         while (left.isFree() && max-- > 0)
         {
             Table.Coordinates coordinates = left.uRandomCoordinates();
-            float w = coordinates.x * -5f - 15f;
+            float w = coordinates.x * -5f - 10f;
             float l = coordinates.y * 5f;
 
             ObjSet set = RandomizableSet.GetRandom(ls.objects);
@@ -244,10 +251,11 @@ public class MapController : MonoBehaviour
         }
 
         max = ObjectsController.MaxCount / _mapLength / 2;
+
         while (right.isFree() && max-- > 0)
         {
             Table.Coordinates coordinates = right.uRandomCoordinates();
-            float w = coordinates.x * 5f + 15f;
+            float w = coordinates.x * 5f + 10f;
             float l = coordinates.y * 5f;
 
             ObjSet set = RandomizableSet.GetRandom(ls.objects);
