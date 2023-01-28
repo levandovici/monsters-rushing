@@ -49,6 +49,7 @@ public class Loading : MonoBehaviour
             if (progress < asyncOperation.progress)
                 progress = asyncOperation.progress;
 
+
             _loadBar.value = progress;
             _loadBarText.text = $"{(int)(progress * 100f)}%";
 

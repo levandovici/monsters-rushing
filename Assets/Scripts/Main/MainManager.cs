@@ -72,7 +72,7 @@ public class MainManager : MonoBehaviour
         _UIManager.Settings.OnMusicVolumeChanged += (f) => SetMusicVolume(f);
         _UIManager.Settings.OnPrivacyPolicyClicked += () =>
         {
-            Application.OpenURL(@"https://unity3d.com/legal/privacy-policy");
+            Application.OpenURL(@"https://limonado.nikitalnc.com/legal/monsters-rushing/");
         };
 
 
