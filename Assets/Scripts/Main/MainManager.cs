@@ -6,6 +6,10 @@ using System;
 
 public class MainManager : MonoBehaviour
 {
+    private const string PRIVACY_POLICY = "https://limonado-entertainment.jimdosite.com/privacy.policy/";
+
+
+
     [SerializeField]
     private MainUIManager _UIManager;
     [SerializeField]
@@ -72,7 +76,7 @@ public class MainManager : MonoBehaviour
         _UIManager.Settings.OnMusicVolumeChanged += (f) => SetMusicVolume(f);
         _UIManager.Settings.OnPrivacyPolicyClicked += () =>
         {
-            Application.OpenURL(@"https://limonado.nikitalnc.com/legal/monsters-rushing/");
+            Application.OpenURL(PRIVACY_POLICY);
         };
 
 

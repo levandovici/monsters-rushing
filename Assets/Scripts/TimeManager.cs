@@ -10,6 +10,7 @@ using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Threading;
+using UnityEditor.PackageManager.Requests;
 
 public class TimeManager
 {
@@ -49,20 +50,9 @@ public class TimeManager
 
     private static bool GetNetTime(out DateTime result)
     {
-        var myHttpWebRequest = (HttpWebRequest)WebRequest.Create("http://www.microsoft.com");
-        var response = myHttpWebRequest.GetResponse();
+        result = DateTime.Now;
 
-        string todaysDates = response.Headers["date"];
-
-        DateTime dt = DateTime.Now;
-        
-        bool isValid = DateTime.TryParseExact(todaysDates, "ddd, dd MMM yyyy HH:mm:ss 'GMT'",
-            CultureInfo.InvariantCulture.DateTimeFormat, DateTimeStyles.AssumeUniversal, out dt);
-
-        result = dt;
-        Debug.Log(dt);
-        Debug.Log(isValid);
-        return isValid;
+        return true;
     }
 
 
