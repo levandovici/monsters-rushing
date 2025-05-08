@@ -12,8 +12,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Net.Http;
 using System.Text;
-using UnityEditor.PackageManager;
-using Unity.Android.Gradle;
 using TMPro;
 using Newtonsoft.Json;
 
