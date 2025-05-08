@@ -25,6 +25,13 @@ public class Loading : MonoBehaviour
 
 
 
+    private async void Awake()
+    {
+        //await TimeManager.GetNetworkTime();
+    }
+
+
+
     private void Start()
     {
         SaveLoadManager.Load();

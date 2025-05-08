@@ -10,48 +10,83 @@ using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Net.Http;
+using System.Text;
+using UnityEditor.PackageManager;
+using Unity.Android.Gradle;
+using TMPro;
+using Newtonsoft.Json;
 
-public class TimeManager
+public static class TimeManager
 {
     private static bool _isNetworkTime = false;
-    private static DateTime _time;
+    private static DateTime _time = DateTime.Now;
+
+
+
+    public static bool IsNetworkTime
+    {
+        get
+        {
+            return _isNetworkTime;
+        }
+
+        private set
+        {
+            _isNetworkTime = value;
+        }
+    }
+
+    public static DateTime Time
+    {
+        get
+        {
+            return _time;
+        }
+
+        private set
+        {
+            _time = value;
+        }
+    }
 
 
 
     public static bool GetNetworkTime(out long result)
     {
-        if(_isNetworkTime)
-        {
-            result = _time.Ticks;
-            return true;
-        }
+        result = DateTime.Now.Ticks;
 
+        return _isNetworkTime;
+    }
+
+    public static async Task<GetNetTimeResult> GetNetworkTime()
+    {
         try
         {
-            DateTime dt;
-            bool isCorrect = GetNetTime(out dt);
-            if (!isCorrect)
-                throw new Exception();
+            GetNetTimeResult res = await GetNetTime();
 
-            _time = dt;
-            result = _time.Ticks;
+            if (!res.success)
+            {
+                throw new Exception("GetNetTimeResult: Success: False");
+            }
+
+            _time = res.time;
+
+            _isNetworkTime = true;
         }
         catch
         {
-            result = DateTime.Now.Ticks;
+            _time = DateTime.Now;
+
             _isNetworkTime = false;
-            return false;
         }
 
-        _isNetworkTime = true;
-        return true; 
+        return new GetNetTimeResult(_isNetworkTime, _time);
     }
 
-    private static bool GetNetTime(out DateTime result)
+    public static async Task<GetNetTimeResult> GetNetTime(float timeoutSeconds = 10f)
     {
-        result = DateTime.Now;
-
-        return true;
+        throw new NotImplementedException();
     }
 
 
@@ -80,6 +115,38 @@ public class TimeManager
     {
         return IsWeekend(new DateTime(ticks));
     }
+
+
+
+
+    // Class to match the JSON structure
+    [System.Serializable]
+    private class TimeData
+    {
+        public long ticks;
+        public string datetime;
+    }
+
+
+
+    public struct GetNetTimeResult
+    {
+        public bool success;
+
+        public DateTime time;
+
+
+
+        public GetNetTimeResult(bool success, DateTime time)
+        {
+            this.success = success;
+
+            this.time = time;
+        }
+    }
+
+
+
 
 
     public static EHolliday CurrentHolliday(DateTime dateTime)

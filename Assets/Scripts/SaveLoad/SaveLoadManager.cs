@@ -7,7 +7,7 @@ public static class SaveLoadManager
 {
     private const string FileName = "data";
 
-    private static ISaveLoader _saveLoader = new JsonSaveLoader();
+    private static ISaveLoader _saveLoader = new PlayerPrefsSaveLoader();
     private static PlayerData _current = null;
 
 
