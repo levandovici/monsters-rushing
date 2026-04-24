@@ -1105,4 +1105,22 @@ public class MainManager : MonoBehaviour
             }
         }
     }
+
+    // Method to handle deep link promo codes
+    public void OpenShopWithPromoCode(string promoCode)
+    {
+        Debug.Log($"Opening shop with promo code: {promoCode}");
+        
+        // Open shop panel
+        _UIManager.OpenShop();
+        
+        // Set the promo code in the shop UI
+        if (_UIManager.Shop != null)
+        {
+            _UIManager.Shop.SetPromoCode(promoCode);
+        }
+        
+        // Play sound effect
+        _soundController.PlaySFX(SoundController.ESFXClip.Click);
+    }
 }

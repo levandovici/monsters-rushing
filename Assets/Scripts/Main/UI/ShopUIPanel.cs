@@ -167,8 +167,6 @@ public class ShopUIPanel : UIPanel, IUITitled
         _networkRequireText.text = Words.GetWord(Word.network_require, language);
     }
 
-
-
     public void ResetPromoCode()
     {
         _n1.text = "";
@@ -178,7 +176,21 @@ public class ShopUIPanel : UIPanel, IUITitled
         _n5.text = "";
     }
 
+    public void SetPromoCode(string promoCode)
+    {
+        if (string.IsNullOrEmpty(promoCode))
+            return;
 
+        string[] parts = promoCode.Split('-');
+        if (parts.Length == 5)
+        {
+            _n1.text = parts[0];
+            _n2.text = parts[1];
+            _n3.text = parts[2];
+            _n4.text = parts[3];
+            _n5.text = parts[4];
+        }
+    }
 
     private void Start()
     {
