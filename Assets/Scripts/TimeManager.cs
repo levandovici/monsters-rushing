@@ -84,7 +84,42 @@ public static class TimeManager
 
     public static async Task<GetNetTimeResult> GetNetTime(float timeoutSeconds = 10f)
     {
-        throw new NotImplementedException();
+        using (var client = new HttpClient())
+        using (var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeoutSeconds)))
+        {
+            try
+            {
+                var response = await client.GetAsync(
+                    "https://games.michitai.com/server/time.php",
+                    cts.Token
+                );
+
+                response.EnsureSuccessStatusCode();
+
+                string json = await response.Content.ReadAsStringAsync();
+
+                // Deserialize using Newtonsoft (since you're already including it)
+                TimeData data = JsonConvert.DeserializeObject<TimeData>(json);
+
+                if (data == null)
+                    throw new Exception("Invalid JSON response");
+
+                // Prefer timestamp (more reliable than parsing string)
+                DateTime utcTime = DateTimeOffset
+                    .FromUnixTimeSeconds(data.timestamp)
+                    .UtcDateTime;
+
+                return new GetNetTimeResult(true, utcTime);
+            }
+            catch (OperationCanceledException)
+            {
+                return new GetNetTimeResult(false, DateTime.Now);
+            }
+            catch (Exception)
+            {
+                return new GetNetTimeResult(false, DateTime.Now);
+            }
+        }
     }
 
 
@@ -116,13 +151,12 @@ public static class TimeManager
 
 
 
-
-    // Class to match the JSON structure
     [System.Serializable]
     private class TimeData
     {
-        public long ticks;
-        public string datetime;
+        public string utc;
+        public long timestamp;
+        public string readable;
     }
 
 
@@ -149,11 +183,11 @@ public static class TimeManager
 
     public static EHolliday CurrentHolliday(DateTime dateTime)
     {
-        if (dateTime.Month >= 3 && dateTime.Month <= 5)
+        if (dateTime.Month >= 3 || dateTime.Month <= 5)
         {
             return EHolliday.Paska;
         }
-        else if (dateTime.Month >= 12 && dateTime.Month <= 1)
+        else if (dateTime.Month >= 12 || dateTime.Month <= 1)
         {
             return EHolliday.Christmas;
         }

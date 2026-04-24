@@ -6,7 +6,7 @@ using System;
 
 public class MainManager : MonoBehaviour
 {
-    private const string PRIVACY_POLICY = "https://games.limonadoent.com/privacy-policy.html";
+    private const string PRIVACY_POLICY = "https://games.michitai.com/privacy-policy.html";
 
 
 
