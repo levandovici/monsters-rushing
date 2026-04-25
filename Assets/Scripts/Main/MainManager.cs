@@ -459,6 +459,8 @@ public class MainManager : MonoBehaviour
                     }
 
                     SaveLoadManager.Current.promoCodesArchive.Add(s);
+
+                    SaveLoadManager.Save();
                 }
             }
 
@@ -644,6 +646,8 @@ public class MainManager : MonoBehaviour
             _UIManager.PlayerInfo.SetUp(SaveLoadManager.Current.name, SaveLoadManager.Current.bestScore);
             _UIManager.EditName.Hide();
             _soundController.PlaySFX(SoundController.ESFXClip.Click);
+
+            SaveLoadManager.Save();
 
             Debug.Log(SaveLoadManager.Current.freeNameEdit);
         };
@@ -856,11 +860,21 @@ public class MainManager : MonoBehaviour
     private void OnApplicationPause(bool pause)
     {
         ResetResources();
+
+        if(pause)
+        {
+            SaveLoadManager.Save();
+        }
     }
 
     private void OnApplicationFocus(bool focus)
     {
         ResetResources();
+
+        if (!focus)
+        {
+            SaveLoadManager.Save();
+        }
     }
 
 
