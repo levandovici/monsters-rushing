@@ -60,6 +60,8 @@ public class EditNameUIPanel : UIPanel
         _ok.gameObject.SetActive(!newName);
         _payPanel.SetActive(newName);
         _priceText.text = (_price = price).ToString();
+
+        _close.interactable = newName;
     }
 
     public override void Show()

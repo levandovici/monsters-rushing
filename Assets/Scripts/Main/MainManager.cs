@@ -34,6 +34,8 @@ public class MainManager : MonoBehaviour
     [SerializeField]
     private Transform _moon;
 
+    private bool _editName = false;
+
 
 
     private void Awake()
@@ -119,6 +121,16 @@ public class MainManager : MonoBehaviour
             _carsController.SetUp(SaveLoadManager.Current.selectedCar);
             _carsController.StopRotation();
             _soundController.PlaySFX(SoundController.ESFXClip.Click);
+
+            if (SaveLoadManager.IsFirstLoad)
+            {
+                if (_editName)
+                {
+                    _UIManager.OpenEditName(false, 0);
+
+                    _editName = false;
+                }
+            }
         };
         _UIManager.OnShopOpened += () =>
         {
@@ -815,13 +827,25 @@ public class MainManager : MonoBehaviour
         _tasksController.SetUp(SaveLoadManager.Current.language);
 
         ResetResources();
-        _UIManager.OpenMain();
+
+        if (!_UIManager.IsShop)
+        {
+            _UIManager.OpenMain();
+        }
+
         _UIManager.SetLanguage(SaveLoadManager.Current.language);
         _UIManager.Main.SetName(SaveLoadManager.Current.name);
 
         if (SaveLoadManager.IsFirstLoad)
         {
-            _UIManager.OpenEditName(false, 0);
+            if (!_UIManager.IsShop)
+            {
+                _UIManager.OpenEditName(false, 0);
+            }
+            else
+            {
+                _editName = true;
+            }
         }
 
         AddTasks();
@@ -1133,8 +1157,5 @@ public class MainManager : MonoBehaviour
         {
             _UIManager.Shop.SetPromoCode(promoCode);
         }
-        
-        // Play sound effect
-        _soundController.PlaySFX(SoundController.ESFXClip.Click);
     }
 }

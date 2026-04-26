@@ -49,6 +49,16 @@ public class MainUIManager : MonoBehaviour
 
 
 
+    public bool IsShop
+    {
+        get
+        {
+            return _shopUIPanel.gameObject.activeSelf;
+        }
+    }
+
+
+
     public MainUIPanel Main => _mainUIPanel;
     public ShopUIPanel Shop => _shopUIPanel;
     public CarsUIPanel Cars => _carsUIPanel;
@@ -103,7 +113,7 @@ public class MainUIManager : MonoBehaviour
 
         _back.gameObject.SetActive(false);
 
-        OnMainOpened.Invoke();
+        OnMainOpened?.Invoke();
     }
 
     public void OpenShop()
@@ -113,7 +123,7 @@ public class MainUIManager : MonoBehaviour
         _shopUIPanel.ResetPromoCode();
         _back.gameObject.SetActive(true);
 
-        OnShopOpened.Invoke();
+        OnShopOpened?.Invoke();
     }
 
     public void OpenCars()
@@ -122,7 +132,7 @@ public class MainUIManager : MonoBehaviour
         _carsUIPanel.Show();
         _back.gameObject.SetActive(true);
 
-        OnCarsOpened.Invoke();
+        OnCarsOpened?.Invoke();
     }
 
     public void OpenSettings()
@@ -131,7 +141,7 @@ public class MainUIManager : MonoBehaviour
         _settingsUIPanel.Show();
         _back.gameObject.SetActive(true);
 
-        OnSettingsOpened.Invoke();
+        OnSettingsOpened?.Invoke();
     }
 
     public void OpenTasks()
@@ -140,7 +150,7 @@ public class MainUIManager : MonoBehaviour
         _tasksUIPanel.Show();
         _back.gameObject.SetActive(true);
 
-        OnTasksOpened.Invoke();
+        OnTasksOpened?.Invoke();
     }
 
     public void OpenPlayerInfo()
@@ -149,7 +159,7 @@ public class MainUIManager : MonoBehaviour
         _playerInfoPanel.Show();
         _back.gameObject.SetActive(true);
 
-        OnPlayerInfoOpened.Invoke();
+        OnPlayerInfoOpened?.Invoke();
     }
 
     public void OpenEditName(bool newName, int price)
@@ -157,7 +167,7 @@ public class MainUIManager : MonoBehaviour
         _editNamePanel.Show(newName, price);
         _back.gameObject.SetActive(false);
 
-        OnEditNameOpened.Invoke();
+        OnEditNameOpened?.Invoke();
     }
 
     public void OpenInternetRequire()
@@ -165,7 +175,7 @@ public class MainUIManager : MonoBehaviour
         _internetRequirePanel.Show();
         _back.gameObject.SetActive(false);
 
-        OnInternetRequireOpened.Invoke();
+        OnInternetRequireOpened?.Invoke();
     }
 
     public void OpenSwitchAccount()
@@ -174,7 +184,7 @@ public class MainUIManager : MonoBehaviour
         _switchAccountPanel.Show();
         _back.gameObject.SetActive(false);
 
-        OnSwitchAccountOpened.Invoke();
+        OnSwitchAccountOpened?.Invoke();
     }
 
     public void OpenInventory()
@@ -183,7 +193,7 @@ public class MainUIManager : MonoBehaviour
         _inventoryPanel.Show();
         _back.gameObject.SetActive(true);
 
-        OnInventoryOpened.Invoke();
+        OnInventoryOpened?.Invoke();
     }
 
     public void OpenOpenChest()
@@ -191,19 +201,19 @@ public class MainUIManager : MonoBehaviour
         _openChestPanel.Show();
         _back.gameObject.SetActive(true);
 
-        OnOpenChestOpened.Invoke();
+        OnOpenChestOpened?.Invoke();
     }
 
     public void OpenYouGot()
     {
         _youGotPanel.Show();
-        OnYouGotOpened.Invoke();
+        OnYouGotOpened?.Invoke();
     }
 
     public void OpenPromoCodeError()
     {
         _promoCodeErrorPanel.Show();
-        OnPromoCodeErrorOpened.Invoke();
+        OnPromoCodeErrorOpened?.Invoke();
     }
 
 

@@ -13,6 +13,8 @@ public class DeepLinkHandler : MonoBehaviour
         get { return _instance; }
     }
 
+
+
     void Awake()
     {
         if (_instance != null && _instance != this)
@@ -25,12 +27,21 @@ public class DeepLinkHandler : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         Application.deepLinkActivated += OnDeepLink;
-        
+    }
+
+    private void Start()
+    {
         if (!string.IsNullOrEmpty(Application.absoluteURL))
         {
             OnDeepLink(Application.absoluteURL);
         }
+
+#if UNITY_EDITOR
+        OnDeepLink("monstersrush://promo?code=JGYE-5PQ6-EPUN-YOSA-HT4L");
+#endif
     }
+
+
 
     void OnEnable()
     {
@@ -41,6 +52,8 @@ public class DeepLinkHandler : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+
 
     void OnDeepLink(string url)
     {
